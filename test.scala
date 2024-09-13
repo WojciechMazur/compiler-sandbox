@@ -8,4 +8,4 @@ import spire.implicits.*
 
 class TestingCode:
   def testFunction(value: UInt): Unit = ???
-  val tc = TestingCode().testFunction(ui"1")
+  val tc = TestingCode().testFunction(1)
