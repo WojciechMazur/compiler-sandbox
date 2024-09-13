@@ -18,10 +18,10 @@ jobs:
     - uses: VirtusLab/scala-cli-setup@v1
 
     - name: Compile stable
-      run: scala-cli compile .
+      run: scala-cli run .
 
     - name: Compile nightly
-      run: scala-cli compile -S 3.nightly .
+      run: scala-cli run -S 3.nightly .
 
     - name: Compile LTS
-      run: scala-cli compile -S 3.lts .
+      run: scala-cli run -S 3.lts .
