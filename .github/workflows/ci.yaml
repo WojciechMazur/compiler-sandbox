@@ -19,6 +19,11 @@ jobs:
     - uses: coursier/cache-action@v6.3
     - uses: VirtusLab/scala-cli-setup@v1
 
+    - name: test ad-hoc installation of binaries
+      run: |
+        sudo apt-get install unzip 
+        unzip -v
+
     - name: Compile stable
       run: scala-cli run .
 
