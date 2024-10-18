@@ -20,9 +20,11 @@ jobs:
     - uses: VirtusLab/scala-cli-setup@v1
 
     - name: test ad-hoc installation of binaries
-      run: |
-        sudo apt-get install unzip 
-        unzip -v
+      run: sudo apt update && sudo apt install bazel
+
+    - name: test ad-hoc installation of binaries
+      run: apt update && apt install bazel
+
 
     - name: Compile stable
       run: scala-cli run .
