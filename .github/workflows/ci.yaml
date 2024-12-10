@@ -6,6 +6,8 @@ on:
 jobs:
   test_release:
     runs-on: ubuntu-latest
+    permissions: 
+      contents: write
     container:
       image: lampepfl/dotty:2024-10-18
       options: --cpu-shares 4096
