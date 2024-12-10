@@ -25,7 +25,7 @@ jobs:
         run: |
           echo "test-release-asset" > asset.txt
           echo "test-release-asset" > asset2.txt
-          echo "RELEASE_TAG=${1.2.3-RC1}" >> $GITHUB_ENV
+          echo "RELEASE_TAG=1.2.3-RC1" >> $GITHUB_ENV
       
       - name: Install GH CLI
         uses: dev-hanz-ops/install-gh-cli-action@v0.2.0
