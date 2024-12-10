@@ -39,12 +39,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         shell: bash
         run: |
+          set -x
           gh release create \
           --draft \
           --title "${{ env.RELEASE_TAG }}" \
           --latest=${{ !contains(env.RELEASE_TAG, '-RC') }} \
           --prerelease=${{ contains(env.RELEASE_TAG, '-RC') }} \
-          ${{ env.RELEASE_TAG }} \
+          --verify-tag ${{ env.RELEASE_TAG }} \
           asset*.txt
           
   
