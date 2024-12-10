@@ -26,6 +26,7 @@ jobs:
           echo "test-release-asset" > asset.txt
           echo "test-release-asset" > asset2.txt
           echo "RELEASE_TAG=1.2.3-RC1" >> $GITHUB_ENV
+          git config --global --add safe.directory /__w/compiler-sandbox/compiler-sandbox
       
       - name: Install GH CLI
         uses: dev-hanz-ops/install-gh-cli-action@v0.2.0
